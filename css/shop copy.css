@@ -1,0 +1,148 @@
+.shop-title {
+  background: url("../img/assets_shop_KeyVisual.webp") center/cover no-repeat;
+}
+.shop {
+  margin: 6rem auto;
+}
+/* 徒歩〇分 */
+.shop-content2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.shop-align {
+  position: relative;
+}
+.shop-banner {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--red);
+  font-size: 1.875rem;
+  text-align: center;
+  line-height: 2.2rem;
+}
+.shop-banner::before,
+.shop-banner::after {
+  content: "";
+  width: 60px;
+  height: 8px;
+  background-color: var(--red);
+  position: absolute;
+  bottom: 38%;
+  transform: translateY(-50%) rotate(20deg);
+}
+.shop-banner::before {
+  left: -80px;
+  transform: translateY(-50%) rotate(50deg);
+}
+.shop-banner::after {
+  right: -80px;
+  transform: translateY(-50%) rotate(-50deg);
+}
+.shop-content2 img {
+  left: 65%;
+  padding-left: 8rem;
+  width: 8.125rem;
+  transform: rotate(10deg);
+  position: absolute;
+}
+/* 店舗情報詳細 */
+.shop-content3 {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: 3rem;
+}
+.shop-content3 .shop-info-details {
+  font-weight: bolder;
+}
+.shop-content3 .shop-info-details dt {
+  float: left;
+}
+.shop-content3 .shop-info-details dd {
+  padding-left: 6rem;
+}
+.shop-content3 a {
+  margin-left: 8rem;
+  display: flex;
+}
+/* 地図 */
+.shop-content1,
+.shop-content3 .map-container {
+  border: 3.5px solid var(--red);
+  border-radius: 0.4rem;
+}
+.shop-content1 iframe,
+.shop-content3 iframe {
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 0.4rem;
+}
+/* 店舗画像 */
+#shop-content .left,
+#shop-content .right {
+  max-width: 100%;
+  height: auto;
+}
+#shop-content .right {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+#shop-content .interior:first-of-type {
+  margin: 3rem 0;
+}
+@media (max-width: 834px) {
+  /* 地図 */
+  .shop-content1 iframe {
+    width: 100%;
+    height: 50vw;
+  }
+  /* 徒歩〇分 */
+  .shop-banner {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+  .shop-banner::before,
+  .shop-banner::after {
+    width: 28px;
+    height: 2px;
+  }
+  .shop-banner::before {
+    left: -40px;
+  }
+  .shop-banner::after {
+    right: -40px;
+  }
+  .shop-content2 img {
+    left: 50%;
+    width: 2.875rem;
+    transform: rotate(0);
+  }
+  /* 店舗情報詳細 */
+  .shop-content3 {
+    justify-content: center;
+  }
+  .shop-content3 .shop-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .shop-content3 .shop-info-details dd {
+    padding-left: 3rem;
+  }
+  /* 店舗画像 */
+  #shop-content .left,
+  #shop-content .right {
+    min-height: 12.5rem;
+    object-fit: cover;
+  }
+  #shop-content .interior:first-of-type {
+    margin: 2rem 0;
+  }
+}

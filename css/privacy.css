@@ -1,0 +1,22 @@
+.page-title {
+  background: url("../img/assets_privacy_KeyVisual.webp") center/cover no-repeat;
+  margin-bottom: 6.25rem;
+}
+.privacy p {
+  margin-bottom: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+}
+.privacy .right {
+  text-align: right;
+}
+
+@media (max-width: 834px) {
+  .page-title {
+    margin-bottom: 0;
+  }
+  .privacy p {
+    line-height: 1.5rem;
+  }
+}

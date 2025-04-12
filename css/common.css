@@ -1,0 +1,291 @@
+@charset "utf-8";
+/*
+FUNCTION
+================================================ */
+:root {
+  --red: #B70024;
+  --white: #fff;
+  --black: #0A0C0F;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Yu Gothic", "游ゴシック", "游ゴシック体", "YuGothic", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: var(--black);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.PC-none {
+  display: none;
+}
+.SP-none {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.white {
+  color: var(--white);
+}
+
+.logo {
+  width: 12.5rem;
+}
+
+.SNS-link:hover {
+  opacity: 0.7;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+/*
+MAIN
+================================================ */
+.wrapper {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+.container {
+  padding: 0 2rem;
+  max-width: 70rem;
+  margin: 0 auto 3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.page-title {
+  position: relative;
+  width: 100vw;
+  height: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+.page-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255,255,255,0)), to(#fff));
+  background: -o-linear-gradient(rgba(255,255,255,0) 0, #fff 100%);
+  background: linear-gradient(rgba(255,255,255,0) 0, #fff 100%);
+}
+.page-title h1 {
+  position: relative;
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5.875rem;
+  color: var(--black);
+  z-index: 1;
+}
+.button {
+  width: 17.6875rem;
+  height: 4.75rem;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: var(--white);
+  color: var(--black);
+  font-size: 19px;
+  font-weight: bolder;
+  border: 1px solid var(--red);
+  border-radius: 5rem;
+  text-decoration: underline;
+}
+/* ページトップへ戻るボタン */
+.pagetop-btn {
+  position: fixed;
+  bottom: 60px;
+  /*bottom: 160px;*/
+  right: -1rem;
+  width: 9.375rem;
+  height: 9.375rem;
+  cursor: pointer;
+  z-index: 999;
+}
+.pagetop-btn .pagetop-btn-container {
+  position: relative;
+  width: 7rem;
+  height: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.pagetop-btn .pagetop-btn-container img {
+  position: absolute;
+  width: 100%;
+  z-index: 998;
+}
+.pagetop-btn .pagetop-btn-container .pagetop-hover {
+  top: -.5rem;
+  z-index: 999;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+}
+/* ホバー時：上に伸びたままキープ */
+.pagetop-btn:hover .pagetop-hover {
+  -webkit-animation: bounceUp 0.6s ease-out forwards;
+          animation: bounceUp 0.6s ease-out forwards;
+}
+
+/* カーソルを外したときのバウンドアニメーション */
+.pagetop-btn .pagetop-btn-container:not(:hover) .pagetop-hover {
+  -webkit-animation: bounceDown 0.3s ease-out forwards;
+          animation: bounceDown 0.3s ease-out forwards;
+}
+
+@-webkit-keyframes bounceUp {
+  0% { -webkit-transform: scaleY(1); transform: scaleY(1); }
+  30% { -webkit-transform: scaleY(1.4) translateY(-5px); transform: scaleY(1.4) translateY(-5px); }
+  50% { -webkit-transform: scaleY(1.35) translateY(2px); transform: scaleY(1.35) translateY(2px); }
+  70% { -webkit-transform: scaleY(1.35) translateY(-2px); transform: scaleY(1.35) translateY(-2px); }
+  100% { -webkit-transform: scaleY(1.4) translateY(0); transform: scaleY(1.4) translateY(0); }
+}
+
+@keyframes bounceUp {
+  0% { -webkit-transform: scaleY(1); transform: scaleY(1); }
+  30% { -webkit-transform: scaleY(1.4) translateY(-5px); transform: scaleY(1.4) translateY(-5px); }
+  50% { -webkit-transform: scaleY(1.35) translateY(2px); transform: scaleY(1.35) translateY(2px); }
+  70% { -webkit-transform: scaleY(1.35) translateY(-2px); transform: scaleY(1.35) translateY(-2px); }
+  100% { -webkit-transform: scaleY(1.4) translateY(0); transform: scaleY(1.4) translateY(0); }
+}
+@-webkit-keyframes bounceDown {
+  0% { -webkit-transform: scaleY(1.4) translateY(0); transform: scaleY(1.4) translateY(0); }
+  30% { -webkit-transform: scaleY(1.25) translateY(-2px); transform: scaleY(1.25) translateY(-2px); }
+  50% { -webkit-transform: scaleY(1.1) translateY(2px); transform: scaleY(1.1) translateY(2px); }
+  70% { -webkit-transform: scaleY(1.15) translateY(-1px); transform: scaleY(1.15) translateY(-1px); }
+  100% { -webkit-transform: scaleY(1); transform: scaleY(1); }
+}
+@keyframes bounceDown {
+  0% { -webkit-transform: scaleY(1.4) translateY(0); transform: scaleY(1.4) translateY(0); }
+  30% { -webkit-transform: scaleY(1.25) translateY(-2px); transform: scaleY(1.25) translateY(-2px); }
+  50% { -webkit-transform: scaleY(1.1) translateY(2px); transform: scaleY(1.1) translateY(2px); }
+  70% { -webkit-transform: scaleY(1.15) translateY(-1px); transform: scaleY(1.15) translateY(-1px); }
+  100% { -webkit-transform: scaleY(1); transform: scaleY(1); }
+}
+.pagetop-btn .pagetop-btn-container .pagetop-last {
+  z-index: 1000;
+}
+
+@media(max-width:834px) {
+  body {
+    font-size: 14px;
+  }
+  .PC-none {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .SP-none {
+    display: none;
+  }
+  .logo {
+    width: 6.25rem;
+    min-width: 6.25rem;
+  }
+  .TikTok {
+    height: 2.0625rem;
+  }
+  .container {
+    margin: 0 auto 2rem;
+    padding: 0 1.25rem;
+  }
+  .wrapper {
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+  }
+  .page-title {
+    width: 100%;
+    height: auto;
+    min-height: 12.5rem;
+  }
+  .page-title h1 {
+    font-size: 2.0625rem;
+  }
+  .button {
+    width: 12.1875rem;
+    height: 3.25rem;
+    margin-left: 0;
+    font-size: 15px;
+  }
+  /* ページトップへ戻るボタン */
+  .pagetop-btn {
+    bottom: 4.6875rem;
+    right: 7px;
+    width: 4.375rem;
+    height: 5rem;
+  }
+  .pagetop-btn .pagetop-btn-container {
+    width: 4rem;
+    height: 4rem;
+  }
+  .pagetop-btn .pagetop-btn-container .pagetop-hover {
+    top: 0;
+  }
+}

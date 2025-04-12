@@ -1,0 +1,251 @@
+.page-title {
+  background: url("../img/assets_shop_KeyVisual.webp") center/cover no-repeat;
+}
+
+/* 店舗情報 */
+.top-shop {
+  margin-bottom: 5rem;
+  width: 1200px;
+  max-width: none;
+  padding: 0;
+  h2 {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+.top-shop-inner {
+  width: 100%;
+  padding: 3.75rem 7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+.top-shop-inner .top-shop-info p,
+.top-shop-inner .top-shop-info dl {
+  font-weight: 600;
+  line-height: 32px;
+}
+.top-shop-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: clamp(15px, 1.5vw, 18px);
+  min-width: 370px;
+  position: relative;
+  z-index: -1;
+}
+.top-shop-title {
+  margin: 0;
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(53px, 3.5vw, 56px);
+  color: var(--black);
+  letter-spacing: 1px;
+}
+.top-shop-align {
+  position: relative;
+  letter-spacing: 2px;
+}
+.top-shop-banner {
+  color: var(--red);
+  text-align: center;
+  position: relative;
+  margin-bottom: 3.75rem;
+}
+.top-shop-banner::before,
+.top-shop-banner::after {
+  content: "";
+  width: 60px;
+  height: 5px;
+  background-color: var(--red);
+  position: absolute;
+  bottom: 50%;
+  -webkit-transform: translateY(-50%) rotate(20deg);
+  -ms-transform: translateY(-50%) rotate(20deg);
+  transform: translateY(-50%) rotate(20deg);
+}
+.top-shop-banner::before {
+  left: -90px;
+  -webkit-transform: translateY(-50%) rotate(50deg);
+  -ms-transform: translateY(-50%) rotate(50deg);
+  transform: translateY(-50%) rotate(50deg);
+}
+.top-shop-banner::after {
+  right: -90px;
+  -webkit-transform: translateY(-50%) rotate(-50deg);
+  -ms-transform: translateY(-50%) rotate(-50deg);
+  transform: translateY(-50%) rotate(-50deg);
+}
+.top-shop-address {
+  margin: 0;
+}
+.top-shop-details {
+  margin: 1rem 0;
+}
+.top-shop-details dt {
+  float: left;
+  letter-spacing: 3px;
+}
+.top-shop-details dd {
+  padding-left: 4rem;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.top-shop-inner a img {
+  width: clamp(380px, 44.85vw, 589px);
+  height: clamp(290px, 30vw, 429px);
+  border: 3.5px solid var(--red);
+  border-radius: 0.4rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: -1;
+}
+.top-shop-inner {
+  background-color: var(--white);
+  z-index: 1;
+  padding: 0;
+  justify-content: space-between;
+}
+.shop-aji {
+  position: relative;
+  display: inline-block;
+}
+.shop-aji::after {
+  content: "";
+  background-image: url(https://hayashida-seifun.com/img/assets_ajihurai.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 7.5rem;
+  height: 4.375rem;
+  right: -230px;
+  top: 16px;
+}
+
+@media (max-width: 1300px) {
+  .top-shop {
+    width: 90%;
+  }
+  .signature-menu .top-signature-text {
+    max-width: 21rem;
+  }
+}
+
+@media (max-width: 834px) {
+  .page-title {
+    margin-bottom: 2rem;
+  }
+  .top-shop-inner {
+    display: contents;
+  }
+  .top-shop-banner {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .top-shop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .shop-aji {
+    order: 2;
+    text-align: center;
+    font-size: clamp(0.6rem, 0.351rem + 1.25vw, 1rem);
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .shop-aji::after {
+    width: clamp(3rem, 1.755rem + 6.23vw, 5rem);
+    right: 50px;
+    top: 12px;
+  }
+  .top-shop-info {
+    order: 3;
+  }
+  .top-shop-map {
+    order: 1;
+    margin: 0 auto 2rem;
+  }
+  .top-shop-banner::before {
+    left: -40px;
+    width: 40px;
+    height: 3px;
+  }
+  .top-shop-banner::after {
+    right: -40px;
+    width: 40px;
+    height: 3px;
+  }
+  .top-shop-inner a img {
+    width: clamp(17.5rem, 3.103rem + 71.98vw, 40.625rem);
+    height: clamp(12.5rem, 4.718rem + 38.91vw, 25rem);
+  }
+  .shop-aji::after {
+    right: -50%;
+    top: 28px;
+  }
+}
+@media (max-width: 599px) {
+  .top-shop-banner::before {
+    left: -20px;
+    width: 20px;
+    height: 2px;
+  }
+  .top-shop-banner::after {
+    right: -20px;
+    width: 20px;
+    height: 2px;
+  }
+  .shop-aji::after {
+    right: -40%;
+  }
+}
+@media (max-width: 399px) {
+  .top-shop-info {
+    font-size: clamp(14px, 1.5vw, 18px);
+    padding: 0 20px;
+    align-items: start;
+  }
+  .top-shop-info dl {
+    margin: 1rem auto;
+    width: 90%;
+  }
+  .top-shop-details dd {
+    padding-left: 2rem;
+    letter-spacing: 0;
+  }
+  .top-shop-details dt {
+    letter-spacing: 0;
+  }
+  .button {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 350px) {
+  .top-shop-info {
+    padding: 0;
+  }
+}

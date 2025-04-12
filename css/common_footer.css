@@ -1,0 +1,105 @@
+@charset "utf-8";
+.footer-about {
+  height: 14.75rem;
+  padding: 0 2rem;
+  background: var(--red);
+}
+.footer-about .footer-inner {
+  max-width: 63.125rem;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+.footer-nav1, .footer-nav2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer-nav1 {
+  margin-bottom: 1.5rem;
+}
+.footer-nav1 li a {
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 2px;
+}
+.footer-nav1 li .white-text {
+  color: var(--white);
+}
+.footer-list {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.5rem;
+}
+.footer-list ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.5rem;
+}
+.footer-nav2 ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+.footer-nav2 address {
+  color: var(--white);
+  font-size: 13px;
+  font-style: normal;
+}
+@media(max-width:834px) {
+  .footer-about {
+    height: 19.6875rem;
+    padding: 0 1.2rem;
+  }
+  .footer-about .footer-inner {
+    padding: 1.8rem 0 0;
+  }
+  .footer-nav1, .footer-nav2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-nav1 {
+    margin-bottom: 2rem;
+  }
+  .footer-list {
+    width: 272px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
+  .footer-list ul {
+    margin: 1.5rem 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    /*gap: 8rem;*/
+    gap: 3%;
+  }
+  .footer-list ul:last-child {
+    margin: 0;
+  }
+  .footer-list-center {
+    margin-left: .8rem;
+  }
+  .footer-nav2 address {
+    margin: 1rem 0;
+  }
+}
